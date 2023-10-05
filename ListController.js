@@ -39,7 +39,7 @@ const ListController = {
 
 
   async updateListItem(req,res){ 
-    const listItem = req.params.listItem;
+    const itemName = req.body.itemName;
     const newQuantity = req.body.quantity;
 
     try {
