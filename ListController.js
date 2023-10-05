@@ -1,4 +1,4 @@
-const ListItem = require('/ListModel.js');
+const ListItem = require('./ListModel.js');
 
 const ListController = {
 
