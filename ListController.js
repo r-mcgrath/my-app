@@ -3,9 +3,11 @@ const ListItem = require('./ListModel.js');
 const ListController = {
 
   async addListItem(req, res) {
+    console.log(req.body)
     const listItem = new ListItem({
       itemName: req.body.itemName,
       quantity: req.body.quantity
+    
       });
       try{
         await listItem.save();

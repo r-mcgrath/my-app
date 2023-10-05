@@ -19,12 +19,12 @@ const listRouter = express.Router();
 app.use('/list', listRouter);
 
 
-app.get('/',(req, res) => {
-    res.send('Hello there!');
-    });
+// app.get('/',(req, res) => {
+//     res.send('Hello there!');
+//     });
 //post a new item
 listRouter.post('/', listController.addListItem ,(req, res) => {
-    return res.status(200).json(req.body);
+    return res.status(200).json({});
 }
 );
 listRouter.get('/', listController.getList);
