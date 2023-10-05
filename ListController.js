@@ -1,4 +1,4 @@
-const ListItem = require('/ListModel');
+const ListItem = require('/ListModel.js');
 
 const ListController = {
 
@@ -35,7 +35,7 @@ const ListController = {
         res.status(500).json({message: "server error"});
     }
 
-  }
+  },
 
 
   async updateListItem(req,res){ 

@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const path = require('path')
 const PORT = 3000;
-const listController = require('./ListController.js');
+const listController = require('./ListController')
 
 //connect to mongoDB
 connectDB();
@@ -18,24 +18,24 @@ app.use('/list', listRouter);
 
 
 app.get('/',(req, res) => {
-    res.send('You are a wonderful supportive beautiful wife!');
+    res.send('Hello there!');
     });
 //post a new item
 listRouter.post('/', listController.addListItem ,(req, res) => {
     return res.status(200).json(req.body);
 }
 );
-listRouter.get('/itemName', listController.getList, (req, res)=> {
+// listRouter.get('/itemName', listController.getList, (req, res)=> {
 
-})
+// });
 
-listRouter.patch('/:itemName', listController.updateListItem,(req, res) => {
+// listRouter.patch('/:itemName', listController.updateListItem,(req, res) => {
 
-})
+// });
 
-listRouter.delete('/:itemName', listController.deleteListItem,(req, res) => {
+// listRouter.delete('/:itemName', listController.deleteListItem,(req, res) => {
 
-})
+// });
    
 
 
